@@ -739,6 +739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
+  newPlayerName: 
   bestScore: 0
 --- !u!4 &1051832914
 Transform:
@@ -1030,8 +1031,8 @@ Transform:
   m_GameObject: {fileID: 1257172227}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 134, y: 64.2288, z: 400}
-  m_LocalScale: {x: 17.33, y: 74.63328, z: 12.383183}
+  m_LocalPosition: {x: 131.9756, y: 71.6669, z: 400}
+  m_LocalScale: {x: 18.905296, y: 74.63328, z: 13.870403}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1096,7 +1097,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 10
+  field of view: 10.090677
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

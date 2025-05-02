@@ -29,6 +29,7 @@ public class MenuManager : MonoBehaviour
     public void Exit()
     {
         EditorApplication.ExitPlaymode();
+        PlayerInfo.Instance.SaveInfo();
     }
 
     public string InputPlayerName()

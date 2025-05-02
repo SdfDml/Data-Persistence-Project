@@ -12,13 +12,13 @@ public class MainManager : MonoBehaviour
 
     public Text ScoreText;
     public Text BestScoreText;
+    public GameObject StartText;  // it should NOT be <Text> type 
     public GameObject GameOverText;
 
     private bool m_Started = false;
     private int m_Points;
 
     private bool m_GameOver = false;
-
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +38,12 @@ public class MainManager : MonoBehaviour
             }
         }
 
-        BestScoreText.text = $"Best Score : {PlayerInfo.Instance.playerName} : {PlayerInfo.Instance.bestScore}";
+        if (PlayerInfo.Instance != null)
+        {
+            BestScoreText.text = $"Best Score : {PlayerInfo.Instance.playerName} : {PlayerInfo.Instance.bestScore}";
+        }
     }
+        
 
     private void Update()
     {
@@ -47,6 +51,7 @@ public class MainManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                StartText.SetActive(false); // added by Damla 
                 m_Started = true;
                 float randomDirection = Random.Range(-1.0f, 1.0f);
                 Vector3 forceDir = new Vector3(randomDirection, 1, 0);
